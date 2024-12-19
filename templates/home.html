@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero">
+    <div class="profile-container">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Picture" class="profile-pic">
+        <h1>Hello, I'm Your Name</h1>
+        <h2>Senior AI/ML Engineer</h2>
+        <p>Specializing in Machine Learning, Deep Learning, and AI Solutions</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('projects') }}" class="btn">View Projects</a>
+            <a href="{{ url_for('about') }}" class="btn">About Me</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
