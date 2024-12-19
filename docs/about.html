@@ -2,14 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="description" content="Vaibhav Kumar Yadav - Senior AI ML Engineer Portfolio">
+    <title>Vaibhav Kumar Yadav - Portfolio</title>
+    
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="static/css/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
 </head>
 <body>
-    <h1>About Me</h1>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Vaibhav Kumar Yadav</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+<div class="header">
+    Vaibhav Kumar Yadav
+</div>
+<div class="about-container">
+    <h1 class="section-title">About Me</h1>
     <p>Hello! I am an AI/ML Engineer.</p>
     <p>I specialize in developing machine learning models and artificial intelligence solutions.</p>
     <p>My interests include data science, deep learning, and natural language processing.</p>
     <p>In my free time, I enjoy reading research papers and exploring new technologies.</p>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com/Vaibhav-Kumar-Yadav" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.kaggle.com/vaibhavkryadav" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Kaggle Profile">
+                <i class="fab fa-kaggle"></i>
+            </a>
+        </div>
+        <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="static/js/main.js" defer></script>
+    <script>
+        // Update copyright year automatically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Handle loading overlay
+        window.addEventListener('load', function() {
+            document.getElementById('loadingOverlay').classList.add('hidden');
+        });
+
+        // Fallback for browsers with JavaScript disabled
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+    </script>
 </body>
 </html>
