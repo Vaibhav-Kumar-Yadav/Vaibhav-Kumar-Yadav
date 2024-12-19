@@ -1,15 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="hero">
-    <div class="profile-container">
-        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Picture" class="profile-pic">
-        <h1>Hello, I'm Your Name</h1>
-        <h2>Senior AI/ML Engineer</h2>
-        <p>Specializing in Machine Learning, Deep Learning, and AI Solutions</p>
-        <div class="cta-buttons">
-            <a href="{{ url_for('projects') }}" class="btn">View Projects</a>
-            <a href="{{ url_for('about') }}" class="btn">About Me</a>
+<div class="hero-section">
+    <div class="hero-content">
+        <div class="profile-info">
+            <div class="profile-image-container">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Picture" class="profile-pic">
+                <div class="profile-overlay">
+                    <div class="profile-social">
+                        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://kaggle.com/yourusername" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-content">
+                <h1 class="animate-text">Hello, I'm Vaibhav</h1>
+                <h2 class="animate-text-delay">Senior AI/ML Engineer</h2>
+                <p class="typing-text">Specializing in Machine Learning | NLP | Generative AI | Deep Learning </p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">PyTorch</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">Docker</span>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+
+<div class="quick-stats">
+    <div class="stat-item">
+        <i class="fas fa-project-diagram"></i>
+        <h3>20+</h3>
+        <p>Projects Completed</p>
+    </div>
+    <div class="stat-item">
+        <i class="fas fa-blog"></i>
+        <h3>15+</h3>
+        <p>Technical Blogs</p>
+    </div>
+    <div class="stat-item">
+        <i class="fas fa-code"></i>
+        <h3>7+</h3>
+        <p>Years Experience</p>
     </div>
 </div>
 {% endblock %}

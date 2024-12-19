@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Vaibhav</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        
+<div class="projects-container">
+    <h1 class="section-title">Featured Projects</h1>
+    
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="dl">Deep Learning</button>
+        <button class="filter-btn" data-filter="nlp">NLP</button>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project-card" data-category="ml">
+            <div class="project-image">
+                <img src="static/images/project1.jpg" alt="Project 1">
+            </div>
+            <div class="project-info">
+                <h3>Advanced Recommendation System</h3>
+                <p>Built a hybrid recommendation system using collaborative filtering and content-based approaches.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/project1" target="_blank" class="project-btn">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                    <a href="#" class="project-btn">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more project cards with different categories -->
+    </div>
+</div>
+
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://kaggle.com/yourusername" target="_blank"><i class="fab fa-kaggle"></i></a>
+        </div>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

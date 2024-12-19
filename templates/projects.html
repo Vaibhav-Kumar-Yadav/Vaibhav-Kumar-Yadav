@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="projects-container">
+    <h1 class="section-title">Featured Projects</h1>
+    
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="dl">Deep Learning</button>
+        <button class="filter-btn" data-filter="nlp">NLP</button>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project-card" data-category="ml">
+            <div class="project-image">
+                <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project 1">
+            </div>
+            <div class="project-info">
+                <h3>Advanced Recommendation System</h3>
+                <p>Built a hybrid recommendation system using collaborative filtering and content-based approaches.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/project1" target="_blank" class="project-btn">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                    <a href="#" class="project-btn">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more project cards with different categories -->
+    </div>
+</div>
+{% endblock %}

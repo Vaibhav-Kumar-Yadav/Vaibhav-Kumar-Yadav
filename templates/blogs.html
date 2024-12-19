@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="blogs-container">
+    <h1 class="section-title">Technical Blogs</h1>
+    
+    <div class="blog-grid">
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="{{ url_for('static', filename='images/blog1.jpg') }}" alt="Blog 1">
+            </div>
+            <div class="blog-content">
+                <div class="blog-tags">
+                    <span>Machine Learning</span>
+                    <span>Tutorial</span>
+                </div>
+                <h3>Understanding Transformers Architecture</h3>
+                <p>A deep dive into the architecture of transformer models and their applications in NLP.</p>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> Jan 15, 2024</span>
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+                <a href="https://medium.com/@yourusername/article1" target="_blank" class="read-more">
+                    Read on Medium <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Add more blog cards -->
+    </div>
+</div>
+{% endblock %}
