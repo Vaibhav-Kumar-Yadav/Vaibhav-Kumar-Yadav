@@ -1,13 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    const getCurrentTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            return savedTheme;
+        }
+        return prefersDarkScheme.matches ? 'dark' : 'light';
+    };
+
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        const icon = themeToggle.querySelector('i');
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    };
+
+    // Initialize theme
+    setTheme(getCurrentTheme());
+
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = getCurrentTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
+
     // Project Filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
             button.classList.add('active');
 
             const filterValue = button.getAttribute('data-filter');
@@ -58,7 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (!navMenu.contains(e.target) && 
+            !mobileMenu.contains(e.target) && 
+            !themeToggle.contains(e.target)) {
             mobileMenu.classList.remove('active');
             navMenu.classList.remove('active');
         }
@@ -72,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add touch support for mobile devices
+    // Mobile touch support
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -87,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleSwipe() {
         const swipeThreshold = 50;
-        const navMenu = document.querySelector('.nav-menu');
         
         if (touchEndX < touchStartX - swipeThreshold) {
             // Swipe left - close menu
@@ -99,18 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Dark/Light Mode Toggle
-const toggleTheme = () => {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
-};
-
-// Check for saved theme preference
-if (localStorage.getItem('dark-mode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
-
-// Hide loading overlay when page is loaded
+// Handle loading overlay
 window.addEventListener('load', function() {
     document.querySelector('.loading-overlay').classList.add('hidden');
+    // Add theme transition class after page load to prevent initial flash
+    setTimeout(() => {
+        document.body.classList.add('theme-transition');
+    }, 300);
 });

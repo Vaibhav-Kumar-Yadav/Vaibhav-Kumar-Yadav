@@ -26,18 +26,28 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-brand">Vaibhav Kumar Yadav</div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="nav-left">
+            <div class="nav-brand">Vaibhav</div> 
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
+                <li><a href="{{ url_for('projects') }}" class="nav-link">Projects</a></li>
+                <li><a href="{{ url_for('blogs') }}" class="nav-link">Blogs</a></li>
+            </ul>
         </div>
-        <ul class="nav-menu">
-            <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
-            <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
-            <li><a href="{{ url_for('projects') }}" class="nav-link">Projects</a></li>
-            <li><a href="{{ url_for('blogs') }}" class="nav-link">Blogs</a></li>
-        </ul>
+        
+        <div class="nav-right">
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -80,6 +90,9 @@
         window.addEventListener('load', function() {
             document.getElementById('loadingOverlay').classList.add('hidden');
         });
+
+        // Theme transition
+        document.body.classList.add('theme-transition');
 
         // Fallback for browsers with JavaScript disabled
         document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
