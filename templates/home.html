@@ -1,65 +1,119 @@
 {% extends "base.html" %}
 {% block content %}
-<!-- Loading Overlay -->
-<div class="loading-overlay hidden" id="loadingOverlay">
-    <div class="loader"></div>
-</div>
-
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-content">
-        <div class="profile-info">
-            <!-- Profile Image Section -->
-            <div class="profile-image-container">
-                <img src="{{ url_for('static', filename='images/profile.jpg') }}" 
-                     alt="Vaibhav Kumar Yadav" 
-                     class="profile-pic"
-                     loading="lazy">
-            </div>
-
-            <!-- Text Content Section -->
-            <div class="text-content">
-                <div class="intro-text">
-                    <h1 class="animate-text">Hello, I'm Vaibhav</h1>
-                    <h2 class="animate-text-delay">Senior AI/ML Engineer</h2>
-                    <div class="typing-text-container">
-                        <p class="typing-text">Specializing in Machine Learning | NLP | Generative AI | Deep Learning</p>
-                    </div>
-                </div>
-
-                <!-- Tech Stack Section -->
-                <div class="tech-stack">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">SpaCy</span>
-                    <span class="tech-badge">Transformers</span>
-                    <span class="tech-badge">LLMs</span>
-                    <span class="tech-badge">AWS</span>
-                    <span class="tech-badge">Azure OpenAI Service</span>
+<style>
+    .hero {
+        padding-top: 100px; /* Adjust this value as needed */
+    }
+</style>
+<section class="hero">
+    <div class="container">
+        <div class="profile">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" 
+                 alt="Vaibhav Kumar Yadav" 
+                 class="profile-image"
+                 loading="lazy">
+            
+            <div class="profile-content">
+                <h1>Vaibhav Kumar Yadav</h1>
+                <h2>Senior AI/ML Engineer</h2>
+                <p class="profile-description">
+                    Specializing in Machine Learning | NLP | Generative AI | Deep Learning
+                </p>
+                
+                <div class="skills">
+                    <span class="skill-tag" data-tooltip="Python Programming">Python</span>
+                    <span class="skill-tag" data-tooltip="Natural Language Processing">SpaCy</span>
+                    <span class="skill-tag" data-tooltip="Transformer Models">Transformers</span>
+                    <span class="skill-tag" data-tooltip="Large Language Models">LLMs</span>
+                    <span class="skill-tag" data-tooltip="Amazon Web Services">AWS</span>
+                    <span class="skill-tag" data-tooltip="Azure OpenAI Integration">Azure OpenAI</span>
                 </div>
             </div>
         </div>
+
+        <!-- Featured Work Section -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <a href="{{ url_for('projects') }}" class="view-all">View All Projects →</a>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- Featured Project 1 -->
+                <article class="featured-card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='images/project1.jpg') }}" 
+                             alt="AI Copilot System"
+                             loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>AI Copilot System</h3>
+                        <p>Advanced NLP-based assistant for industrial automation</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>GPT-4</span>
+                        </div>
+                        <a href="{{ url_for('projects') }}" class="read-more">Learn More →</a>
+                    </div>
+                </article>
+
+                <!-- Featured Project 2 -->
+                <article class="featured-card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='images/project2.jpg') }}" 
+                             alt="ML Pipeline System"
+                             loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>ML Pipeline System</h3>
+                        <p>Automated machine learning pipeline for data processing</p>
+                        <div class="tech-stack">
+                            <span>TensorFlow</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="{{ url_for('projects') }}" class="read-more">Learn More →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Blogs Section -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>Latest Articles</h2>
+                <a href="{{ url_for('blogs') }}" class="view-all">View All Articles →</a>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- Featured Blog 1 -->
+                <article class="featured-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span>Machine Learning</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>Understanding LLMs</h3>
+                        <p>A comprehensive guide to Large Language Models and their applications</p>
+                        <a href="{{ url_for('blogs') }}" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Featured Blog 2 -->
+                <article class="featured-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span>AI Development</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3>Building AI Copilots</h3>
+                        <p>Best practices for developing AI assistants for industrial applications</p>
+                        <a href="{{ url_for('blogs') }}" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </div>
 </section>
-
-<script>
-    // Handle loading overlay
-    window.addEventListener('load', function() {
-        document.getElementById('loadingOverlay').classList.add('hidden');
-    });
-
-    // Handle mobile optimization
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check if device is mobile
-        const isMobile = window.innerWidth <= 768;
-        
-        if (isMobile) {
-            // Adjust typing text animation for mobile
-            const typingText = document.querySelector('.typing-text');
-            if (typingText) {
-                typingText.style.whiteSpace = 'normal';
-                typingText.style.animation = 'none';
-            }
-        }
-    });
-</script>
 {% endblock %}

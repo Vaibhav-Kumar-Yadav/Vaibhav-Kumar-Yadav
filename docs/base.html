@@ -2,100 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vaibhav Kumar Yadav - Senior AI ML Engineer Portfolio">
     <title>Vaibhav Kumar Yadav - Portfolio</title>
     
-    <!-- Favicon Icon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="{{ url_for('static', filename='css/style.css') }}" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
 </head>
 <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-left">
-            <div class="nav-brand">Vaibhav</div> 
-            <ul class="nav-menu">
-                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
-                <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
-                <li><a href="{{ url_for('projects') }}" class="nav-link">Projects</a></li>
-                <li><a href="{{ url_for('blogs') }}" class="nav-link">Blogs</a></li>
-            </ul>
-        </div>
-        
-        <div class="nav-right">
-            <!-- Theme Toggle Button -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="nav-brand">VKY</a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('projects') }}">Projects</a>
+                <a href="{{ url_for('blogs') }}">Blogs</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="mobileMenu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="content">
+    <main class="main">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/Vaibhav-Kumar-Yadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="GitHub Profile">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.kaggle.com/vaibhavkryadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Kaggle Profile">
-                <i class="fab fa-kaggle"></i>
-            </a>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/Vaibhav-Kumar-Yadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.kaggle.com/vaibhavkryadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav</p>
         </div>
-        <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-    <script>
-        // Update copyright year automatically
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Handle loading overlay
-        window.addEventListener('load', function() {
-            document.getElementById('loadingOverlay').classList.add('hidden');
-        });
-
-        // Theme transition
-        document.body.classList.add('theme-transition');
-
-        // Fallback for browsers with JavaScript disabled
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

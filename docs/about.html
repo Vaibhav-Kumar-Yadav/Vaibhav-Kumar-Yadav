@@ -2,111 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vaibhav Kumar Yadav - Senior AI ML Engineer Portfolio">
     <title>Vaibhav Kumar Yadav - Portfolio</title>
     
-    <!-- Favicon Icon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="static/css/style.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
 </head>
 <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-left">
-            <div class="nav-brand">Vaibhav</div> 
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-            </ul>
-        </div>
-        
-        <div class="nav-right">
-            <!-- Theme Toggle Button -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">VKY</a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="mobileMenu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="content">
+    <main class="main">
         
-<div class="header">
-    Vaibhav Kumar Yadav
-</div>
-<div class="about-container">
-    <h1 class="section-title">About Me</h1>
-    <p>Hello! I am a dynamic and results-driven AI/ML Engineer with 8 years of industry experience.</p>
-    <p>I specialize in Natural Language Processing (NLP) and Generative AI, leading innovative projects to enhance operational efficiency.</p>
-    <p>My work at Siemens includes designing and delivering critical AI applications like Copilots and Chatbots within the industrial automation and power systems domains.</p>
-    <p>Committed to continuous learning and technical leadership, I am eager to contribute to groundbreaking projects and expand AI capabilities.</p>
-</div>
+<section class="about-container">
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="about-profile">
+            <img src="static/images/profile.jpg" 
+                 alt="Vaibhav Kumar Yadav" 
+                 class="about-image"
+                 loading="lazy">
+            <div class="about-intro">
+                <h1>Vaibhav Kumar Yadav</h1>
+                <h2>Senior AI/ML Engineer</h2>
+                <p class="about-tagline">
+                    Transforming industries through AI innovation with 8 years of expertise 
+                    in Machine Learning, NLP, and Generative AI.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="about-content">
+        <!-- Professional Summary -->
+        <section class="about-section">
+            <h2>Professional Summary</h2>
+            <div class="content-block">
+                <p>Currently leading AI initiatives at Siemens, focusing on developing cutting-edge 
+                   AI Copilots and Chatbots for industrial automation and power systems. My work 
+                   combines deep technical expertise with practical industry applications.</p>
+            </div>
+        </section>
+
+        <!-- Core Expertise -->
+        <section class="about-section">
+            <h2>Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <li>Deep Learning Architecture</li>
+                        <li>Neural Networks</li>
+                        <li>Model Optimization</li>
+                        <li>Performance Tuning</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Natural Language Processing</h3>
+                    <ul>
+                        <li>Large Language Models</li>
+                        <li>Transformer Architecture</li>
+                        <li>Text Analytics</li>
+                        <li>Semantic Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Generative AI</h3>
+                    <ul>
+                        <li>GPT Models</li>
+                        <li>Prompt Engineering</li>
+                        <li>AI Assistants</li>
+                        <li>Content Generation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="about-section">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">R</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">SpaCy</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">MLflow</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Journey -->
+        <section class="about-section">
+            <h2>Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Senior AI/ML Engineer</h3>
+                        <h4>Siemens</h4>
+                        <p class="timeline-date">2020 - Present</p>
+                        <ul class="timeline-details">
+                            <li>Leading development of AI Copilots for industrial automation</li>
+                            <li>Implementing large language models for technical documentation analysis</li>
+                            <li>Optimizing ML pipelines for production environments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Machine Learning Engineer</h3>
+                        <h4>Previous Company</h4>
+                        <p class="timeline-date">2016 - 2020</p>
+                        <ul class="timeline-details">
+                            <li>Developed predictive maintenance solutions</li>
+                            <li>Implemented NLP solutions for text classification</li>
+                            <li>Led team of 5 ML engineers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/Vaibhav-Kumar-Yadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="GitHub Profile">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.kaggle.com/vaibhavkryadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Kaggle Profile">
-                <i class="fab fa-kaggle"></i>
-            </a>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/Vaibhav-Kumar-Yadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.kaggle.com/vaibhavkryadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav</p>
         </div>
-        <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="static/js/main.js" defer></script>
-    <script>
-        // Update copyright year automatically
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Handle loading overlay
-        window.addEventListener('load', function() {
-            document.getElementById('loadingOverlay').classList.add('hidden');
-        });
-
-        // Theme transition
-        document.body.classList.add('theme-transition');
-
-        // Fallback for browsers with JavaScript disabled
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-    </script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

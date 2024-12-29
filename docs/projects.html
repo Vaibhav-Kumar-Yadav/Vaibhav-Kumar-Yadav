@@ -2,141 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vaibhav Kumar Yadav - Senior AI ML Engineer Portfolio">
     <title>Vaibhav Kumar Yadav - Portfolio</title>
     
-    <!-- Favicon Icon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="static/css/style.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
 </head>
 <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-left">
-            <div class="nav-brand">Vaibhav</div> 
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-            </ul>
-        </div>
-        
-        <div class="nav-right">
-            <!-- Theme Toggle Button -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">VKY</a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="mobileMenu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="content">
+    <main class="main">
         
-<div class="header">
-    Vaibhav Kumar Yadav
-</div>
-<div class="projects-container">
-    <h1 class="section-title">Featured Projects</h1>
-    
-    <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ml">Machine Learning</button>
-        <button class="filter-btn" data-filter="dl">Deep Learning</button>
-        <button class="filter-btn" data-filter="nlp">NLP</button>
-    </div>
-
-    <div class="projects-grid">
-        <div class="project-card" data-category="ml">
-            <div class="project-image">
-                <img src="static/images/project1.jpg" alt="Project 1">
-            </div>
-            <div class="project-info">
-                <h3>Advanced Recommendation System</h3>
-                <p>Built a hybrid recommendation system using collaborative filtering and content-based approaches.</p>
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>Scikit-learn</span>
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/yourusername/project1" target="_blank" class="project-btn">
-                        <i class="fab fa-github"></i> Code
-                    </a>
-                    <a href="#" class="project-btn">
-                        <i class="fas fa-external-link-alt"></i> Demo
-                    </a>
-                </div>
-            </div>
+<section class="projects-container">
+    <div class="container">
+        <h1 class="section-title">Projects</h1>
+        
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="nlp">NLP</button>
+            <button class="filter-btn" data-filter="genai">Generative AI</button>
         </div>
 
-        <!-- Add more project cards with different categories -->
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card" data-category="genai">
+                <div class="project-image">
+                    <img src="static/images/project1.jpg" 
+                         alt="AI Copilot System"
+                         loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>AI Copilot System</h3>
+                    <p>Advanced NLP-based assistant for industrial automation with real-time response capabilities.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>GPT-4</span>
+                        <span>Azure</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/username/ai-copilot" class="project-btn" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card" data-category="ml">
+                <div class="project-image">
+                    <img src="static/images/project2.jpg" 
+                         alt="Predictive Maintenance System"
+                         loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Predictive Maintenance System</h3>
+                    <p>ML-based system for predicting equipment failures in industrial settings using sensor data.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/username/predictive-maintenance" class="project-btn" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card" data-category="nlp">
+                <div class="project-image">
+                    <img src="static/images/project3.jpg" 
+                         alt="Document Analysis System"
+                         loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Technical Document Analyzer</h3>
+                    <p>NLP system for analyzing and categorizing technical documentation with automated insights.</p>
+                    <div class="project-tech">
+                        <span>SpaCy</span>
+                        <span>BERT</span>
+                        <span>Flask</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/username/doc-analyzer" class="project-btn" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card" data-category="genai">
+                <div class="project-image">
+                    <img src="static/images/project4.jpg" 
+                         alt="Code Generation Assistant"
+                         loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Code Generation Assistant</h3>
+                    <p>AI-powered code generation and optimization tool using latest LLM technologies.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>LangChain</span>
+                        <span>OpenAI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/username/code-gen" class="project-btn" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="project-card" data-category="ml">
+                <div class="project-image">
+                    <img src="static/images/project5.jpg" 
+                         alt="Time Series Forecasting"
+                         loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Industrial Time Series Forecasting</h3>
+                    <p>Advanced time series forecasting system for industrial metrics using deep learning.</p>
+                    <div class="project-tech">
+                        <span>PyTorch</span>
+                        <span>Prophet</span>
+                        <span>MLflow</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/username/time-series" class="project-btn" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6 -->
+            <article class="project-card" data-category="nlp">
+                <div class="project-image">
+                    <img src="static/images/project6.jpg" 
+                         alt="Chatbot System"
+                         loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Industrial Support Chatbot</h3>
+                    <p>Context-aware chatbot for industrial support and troubleshooting assistance.</p>
+                    <div class="project-tech">
+                        <span>Rasa</span>
+                        <span>FastAPI</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/username/support-bot" class="project-btn" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="project-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </div>
-</div>
+</section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/Vaibhav-Kumar-Yadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="GitHub Profile">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.kaggle.com/vaibhavkryadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Kaggle Profile">
-                <i class="fab fa-kaggle"></i>
-            </a>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/Vaibhav-Kumar-Yadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.kaggle.com/vaibhavkryadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav</p>
         </div>
-        <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="static/js/main.js" defer></script>
-    <script>
-        // Update copyright year automatically
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Handle loading overlay
-        window.addEventListener('load', function() {
-            document.getElementById('loadingOverlay').classList.add('hidden');
-        });
-
-        // Theme transition
-        document.body.classList.add('theme-transition');
-
-        // Fallback for browsers with JavaScript disabled
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-    </script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

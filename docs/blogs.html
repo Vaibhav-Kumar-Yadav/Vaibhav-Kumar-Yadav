@@ -2,132 +2,221 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vaibhav Kumar Yadav - Senior AI ML Engineer Portfolio">
     <title>Vaibhav Kumar Yadav - Portfolio</title>
     
-    <!-- Favicon Icon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="static/css/style.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
 </head>
 <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-left">
-            <div class="nav-brand">Vaibhav</div> 
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-            </ul>
-        </div>
-        
-        <div class="nav-right">
-            <!-- Theme Toggle Button -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">VKY</a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="mobileMenu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="content">
+    <main class="main">
         
-<div class="header">
-    Vaibhav Kumar Yadav
-</div>
-<div class="blogs-container">
-    <h1 class="section-title">Technical Blogs</h1>
-    
-    <div class="blog-grid">
-        <div class="blog-card">
-            <div class="blog-image">
-                <img src="static/images/blog1.jpg" alt="Blog 1">
-            </div>
-            <div class="blog-content">
-                <div class="blog-tags">
-                    <span>Machine Learning</span>
-                    <span>Tutorial</span>
-                </div>
-                <h3>Understanding Transformers Architecture</h3>
-                <p>A deep dive into the architecture of transformer models and their applications in NLP.</p>
-                <div class="blog-meta">
-                    <span><i class="far fa-calendar"></i> Jan 15, 2024</span>
-                    <span><i class="far fa-clock"></i> 10 min read</span>
-                </div>
-                <a href="https://medium.com/@yourusername/article1" target="_blank" class="read-more">
-                    Read on Medium <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-        </div>
+<section class="blogs-container">
+    <div class="container">
+        <h1 class="section-title">Technical Articles</h1>
 
-        <!-- Add more blog cards -->
+        <div class="blog-grid">
+            <!-- Blog 1 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="static/images/blog1.jpg" 
+                         alt="Understanding LLMs"
+                         loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-tags">
+                        <span>Machine Learning</span>
+                        <span>NLP</span>
+                    </div>
+                    <h3>Understanding Large Language Models: A Comprehensive Guide</h3>
+                    <p>Deep dive into the architecture, training, and applications of modern Large Language Models. 
+                       Exploring the technology behind GPT, BERT, and other transformer-based models.</p>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Jan 15, 2024</span>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <a href="https://medium.com/@username/llm-guide" class="read-more" target="_blank">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog 2 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="static/images/blog2.jpg" 
+                         alt="AI in Industry"
+                         loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-tags">
+                        <span>Industrial AI</span>
+                        <span>Case Study</span>
+                    </div>
+                    <h3>Implementing AI in Industrial Automation: Best Practices</h3>
+                    <p>Real-world insights and practical approaches to integrating AI solutions in industrial settings. 
+                       Learn about challenges, solutions, and success metrics.</p>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Dec 20, 2023</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <a href="https://medium.com/@username/industrial-ai" class="read-more" target="_blank">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog 3 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="static/images/blog3.jpg" 
+                         alt="MLOps Pipeline"
+                         loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-tags">
+                        <span>MLOps</span>
+                        <span>DevOps</span>
+                    </div>
+                    <h3>Building Robust MLOps Pipelines for Production</h3>
+                    <p>A comprehensive guide to designing and implementing MLOps pipelines that scale. 
+                       Covering continuous integration, deployment, and monitoring of ML models.</p>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Nov 28, 2023</span>
+                        <span><i class="far fa-clock"></i> 12 min read</span>
+                    </div>
+                    <a href="https://medium.com/@username/mlops-guide" class="read-more" target="_blank">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog 4 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="static/images/blog4.jpg" 
+                         alt="AI Copilots"
+                         loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-tags">
+                        <span>AI Assistants</span>
+                        <span>Development</span>
+                    </div>
+                    <h3>Developing AI Copilots: From Concept to Deployment</h3>
+                    <p>Step-by-step guide to building effective AI copilots for industrial applications. 
+                       Learn about architecture decisions, prompt engineering, and deployment strategies.</p>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Nov 5, 2023</span>
+                        <span><i class="far fa-clock"></i> 15 min read</span>
+                    </div>
+                    <a href="https://medium.com/@username/ai-copilots" class="read-more" target="_blank">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog 5 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="static/images/blog5.jpg" 
+                         alt="Time Series Analysis"
+                         loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-tags">
+                        <span>Time Series</span>
+                        <span>Deep Learning</span>
+                    </div>
+                    <h3>Advanced Time Series Forecasting with Deep Learning</h3>
+                    <p>Exploring modern approaches to time series forecasting using deep learning models. 
+                       Practical examples with PyTorch and real-world industrial data.</p>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Oct 15, 2023</span>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <a href="https://medium.com/@username/time-series-dl" class="read-more" target="_blank">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog 6 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="static/images/blog6.jpg" 
+                         alt="Prompt Engineering"
+                         loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-tags">
+                        <span>LLMs</span>
+                        <span>Prompt Engineering</span>
+                    </div>
+                    <h3>The Art of Prompt Engineering for LLMs</h3>
+                    <p>Master the techniques of effective prompt engineering for large language models. 
+                       Learn best practices, patterns, and common pitfalls to avoid.</p>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Sep 30, 2023</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <a href="https://medium.com/@username/prompt-engineering" class="read-more" target="_blank">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
     </div>
-</div>
+</section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/Vaibhav-Kumar-Yadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="GitHub Profile">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.kaggle.com/vaibhavkryadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Kaggle Profile">
-                <i class="fab fa-kaggle"></i>
-            </a>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/Vaibhav-Kumar-Yadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.kaggle.com/vaibhavkryadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav</p>
         </div>
-        <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="static/js/main.js" defer></script>
-    <script>
-        // Update copyright year automatically
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Handle loading overlay
-        window.addEventListener('load', function() {
-            document.getElementById('loadingOverlay').classList.add('hidden');
-        });
-
-        // Theme transition
-        document.body.classList.add('theme-transition');
-
-        // Fallback for browsers with JavaScript disabled
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-    </script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

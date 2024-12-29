@@ -1,13 +1,152 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="header">
-    Vaibhav Kumar Yadav
-</div>
-<div class="about-container">
-    <h1 class="section-title">About Me</h1>
-    <p>Hello! I am a dynamic and results-driven AI/ML Engineer with 8 years of industry experience.</p>
-    <p>I specialize in Natural Language Processing (NLP) and Generative AI, leading innovative projects to enhance operational efficiency.</p>
-    <p>My work at Siemens includes designing and delivering critical AI applications like Copilots and Chatbots within the industrial automation and power systems domains.</p>
-    <p>Committed to continuous learning and technical leadership, I am eager to contribute to groundbreaking projects and expand AI capabilities.</p>
-</div>
+<section class="about-container">
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="about-profile">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" 
+                 alt="Vaibhav Kumar Yadav" 
+                 class="about-image"
+                 loading="lazy">
+            <div class="about-intro">
+                <h1>Vaibhav Kumar Yadav</h1>
+                <h2>Senior AI/ML Engineer</h2>
+                <p class="about-tagline">
+                    Transforming industries through AI innovation with 8 years of expertise 
+                    in Machine Learning, NLP, and Generative AI.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="about-content">
+        <!-- Professional Summary -->
+        <section class="about-section">
+            <h2>Professional Summary</h2>
+            <div class="content-block">
+                <p>Currently leading AI initiatives at Siemens, focusing on developing cutting-edge 
+                   AI Copilots and Chatbots for industrial automation and power systems. My work 
+                   combines deep technical expertise with practical industry applications.</p>
+            </div>
+        </section>
+
+        <!-- Core Expertise -->
+        <section class="about-section">
+            <h2>Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <li>Deep Learning Architecture</li>
+                        <li>Neural Networks</li>
+                        <li>Model Optimization</li>
+                        <li>Performance Tuning</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Natural Language Processing</h3>
+                    <ul>
+                        <li>Large Language Models</li>
+                        <li>Transformer Architecture</li>
+                        <li>Text Analytics</li>
+                        <li>Semantic Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Generative AI</h3>
+                    <ul>
+                        <li>GPT Models</li>
+                        <li>Prompt Engineering</li>
+                        <li>AI Assistants</li>
+                        <li>Content Generation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="about-section">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">R</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">SpaCy</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">MLflow</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Journey -->
+        <section class="about-section">
+            <h2>Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Senior AI/ML Engineer</h3>
+                        <h4>Siemens</h4>
+                        <p class="timeline-date">2020 - Present</p>
+                        <ul class="timeline-details">
+                            <li>Leading development of AI Copilots for industrial automation</li>
+                            <li>Implementing large language models for technical documentation analysis</li>
+                            <li>Optimizing ML pipelines for production environments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Machine Learning Engineer</h3>
+                        <h4>Previous Company</h4>
+                        <p class="timeline-date">2016 - 2020</p>
+                        <ul class="timeline-details">
+                            <li>Developed predictive maintenance solutions</li>
+                            <li>Implemented NLP solutions for text classification</li>
+                            <li>Led team of 5 ML engineers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
 {% endblock %}

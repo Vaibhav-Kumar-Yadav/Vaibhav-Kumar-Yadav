@@ -2,163 +2,180 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vaibhav Kumar Yadav - Senior AI ML Engineer Portfolio">
     <title>Vaibhav Kumar Yadav - Portfolio</title>
     
-    <!-- Favicon Icon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="static/css/style.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
 </head>
 <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-left">
-            <div class="nav-brand">Vaibhav</div> 
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-            </ul>
-        </div>
-        
-        <div class="nav-right">
-            <!-- Theme Toggle Button -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">VKY</a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="mobileMenu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="content">
+    <main class="main">
         
-<!-- Loading Overlay -->
-<div class="loading-overlay hidden" id="loadingOverlay">
-    <div class="loader"></div>
-</div>
-
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-content">
-        <div class="profile-info">
-            <!-- Profile Image Section -->
-            <div class="profile-image-container">
-                <img src="static/images/profile.jpg" 
-                     alt="Vaibhav Kumar Yadav" 
-                     class="profile-pic"
-                     loading="lazy">
-            </div>
-
-            <!-- Text Content Section -->
-            <div class="text-content">
-                <div class="intro-text">
-                    <h1 class="animate-text">Hello, I'm Vaibhav</h1>
-                    <h2 class="animate-text-delay">Senior AI/ML Engineer</h2>
-                    <div class="typing-text-container">
-                        <p class="typing-text">Specializing in Machine Learning | NLP | Generative AI | Deep Learning</p>
-                    </div>
-                </div>
-
-                <!-- Tech Stack Section -->
-                <div class="tech-stack">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">SpaCy</span>
-                    <span class="tech-badge">Transformers</span>
-                    <span class="tech-badge">LLMs</span>
-                    <span class="tech-badge">AWS</span>
-                    <span class="tech-badge">Azure OpenAI Service</span>
+<style>
+    .hero {
+        padding-top: 100px; /* Adjust this value as needed */
+    }
+</style>
+<section class="hero">
+    <div class="container">
+        <div class="profile">
+            <img src="static/images/profile.jpg" 
+                 alt="Vaibhav Kumar Yadav" 
+                 class="profile-image"
+                 loading="lazy">
+            
+            <div class="profile-content">
+                <h1>Vaibhav Kumar Yadav</h1>
+                <h2>Senior AI/ML Engineer</h2>
+                <p class="profile-description">
+                    Specializing in Machine Learning | NLP | Generative AI | Deep Learning
+                </p>
+                
+                <div class="skills">
+                    <span class="skill-tag" data-tooltip="Python Programming">Python</span>
+                    <span class="skill-tag" data-tooltip="Natural Language Processing">SpaCy</span>
+                    <span class="skill-tag" data-tooltip="Transformer Models">Transformers</span>
+                    <span class="skill-tag" data-tooltip="Large Language Models">LLMs</span>
+                    <span class="skill-tag" data-tooltip="Amazon Web Services">AWS</span>
+                    <span class="skill-tag" data-tooltip="Azure OpenAI Integration">Azure OpenAI</span>
                 </div>
             </div>
         </div>
+
+        <!-- Featured Work Section -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <a href="projects.html" class="view-all">View All Projects →</a>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- Featured Project 1 -->
+                <article class="featured-card">
+                    <div class="card-image">
+                        <img src="static/images/project1.jpg" 
+                             alt="AI Copilot System"
+                             loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>AI Copilot System</h3>
+                        <p>Advanced NLP-based assistant for industrial automation</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>GPT-4</span>
+                        </div>
+                        <a href="projects.html" class="read-more">Learn More →</a>
+                    </div>
+                </article>
+
+                <!-- Featured Project 2 -->
+                <article class="featured-card">
+                    <div class="card-image">
+                        <img src="static/images/project2.jpg" 
+                             alt="ML Pipeline System"
+                             loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>ML Pipeline System</h3>
+                        <p>Automated machine learning pipeline for data processing</p>
+                        <div class="tech-stack">
+                            <span>TensorFlow</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="projects.html" class="read-more">Learn More →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Blogs Section -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>Latest Articles</h2>
+                <a href="blogs.html" class="view-all">View All Articles →</a>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- Featured Blog 1 -->
+                <article class="featured-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span>Machine Learning</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>Understanding LLMs</h3>
+                        <p>A comprehensive guide to Large Language Models and their applications</p>
+                        <a href="blogs.html" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Featured Blog 2 -->
+                <article class="featured-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span>AI Development</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3>Building AI Copilots</h3>
+                        <p>Best practices for developing AI assistants for industrial applications</p>
+                        <a href="blogs.html" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </div>
 </section>
 
-<script>
-    // Handle loading overlay
-    window.addEventListener('load', function() {
-        document.getElementById('loadingOverlay').classList.add('hidden');
-    });
-
-    // Handle mobile optimization
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check if device is mobile
-        const isMobile = window.innerWidth <= 768;
-        
-        if (isMobile) {
-            // Adjust typing text animation for mobile
-            const typingText = document.querySelector('.typing-text');
-            if (typingText) {
-                typingText.style.whiteSpace = 'normal';
-                typingText.style.animation = 'none';
-            }
-        }
-    });
-</script>
-
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/Vaibhav-Kumar-Yadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="GitHub Profile">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.kaggle.com/vaibhavkryadav" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Kaggle Profile">
-                <i class="fab fa-kaggle"></i>
-            </a>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://github.com/Vaibhav-Kumar-Yadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vaibhav-kumar-aa1845122/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.kaggle.com/vaibhavkryadav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav</p>
         </div>
-        <p class="copyright">&copy; <span id="currentYear">2024</span> Vaibhav Kumar Yadav. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="static/js/main.js" defer></script>
-    <script>
-        // Update copyright year automatically
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Handle loading overlay
-        window.addEventListener('load', function() {
-            document.getElementById('loadingOverlay').classList.add('hidden');
-        });
-
-        // Theme transition
-        document.body.classList.add('theme-transition');
-
-        // Fallback for browsers with JavaScript disabled
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-    </script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>
