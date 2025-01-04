@@ -5,10 +5,10 @@ Welcome to my portfolio! I am an AI/ML Engineer with a passion for developing in
 ## About Me
 
 I specialize in:
-- Data Science
-- Generative AI
-- Deep Learning
+- Machine Learning
 - Natural Language Processing
+- Deep Learning
+- Generative AI
 
 In my free time, I enjoy reading research papers and exploring new technologies.
 
